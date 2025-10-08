@@ -2,6 +2,7 @@ var rightKey = keyboard_check(ord("D"));
 var leftKey = keyboard_check(ord("A"));
 var upKey = keyboard_check(ord("W"));
 var downKey = keyboard_check(ord("S"));
+var shootKey = mouse_check_button(mb_left);
 
 // player movement
 #region
@@ -43,7 +44,7 @@ var downKey = keyboard_check(ord("S"));
 	// aim
 	aimDir = point_direction(x, centerY, mouse_x, mouse_y);
 
-
+// sprite control
 #region SPRITE CONTROL (6 direções + idle/walk)
 
 // 1) Definir a direção “face” (0..5) a partir do ângulo do mouse
@@ -98,3 +99,15 @@ if (sprite_index != sprite[idx]) {
 image_speed = moving ? 0.18 : 0.12;
 
 #endregion
+
+// shoot the weapon
+if shootKey {
+	// create the power 1
+	var _power1Inst = instance_create_depth(x, centerY, depth - 100, power_1)
+	
+	// change the power direction
+	with(_power1Inst){
+		dir = other.aimDir;
+	}
+
+}

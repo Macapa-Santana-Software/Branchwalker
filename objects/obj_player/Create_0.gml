@@ -33,3 +33,7 @@ sprite_index = sprite[6];
 image_speed  = 0.12; // idle animando (ajuste se quiser parado: 0.0)
 image_index  = 0;
 
+
+// weapon info
+	power_1 = obj_power_1
+
