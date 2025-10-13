@@ -13,13 +13,13 @@ function scr_anim_compile_maps() {
     ];
 
     // Para cada pack (idle e walk)…
-    for (var m = 0; m < array_length_1d(packs); m++) {
+    for (var m = 0; m < array_length(packs); m++) {
         var src_map = packs[m][0];   // struct com nomes (strings)
         var label   = packs[m][1];   // "idle" ou "walk"
         var dst_map = packs[m][2];   // struct onde salvamos os índices
 
         // Varre todas as direções
-        for (var i = 0; i < array_length_1d(keys); i++) {
+        for (var i = 0; i < array_length(keys); i++) {
             var k     = keys[i];                               // "down", "up", etc.
             var name  = variable_struct_get(src_map, k);       // nome do sprite (string)
             var idx   = is_string(name) ? asset_get_index(name) : -1;

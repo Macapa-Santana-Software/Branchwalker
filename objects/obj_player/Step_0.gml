@@ -103,7 +103,7 @@ image_speed = moving ? 0.18 : 0.12;
 // shoot the weapon
 if shootKey {
 	// create the power 1
-	var _power1Inst = instance_create_depth(x, centerY, depth - 100, power_1)
+	var _power1Inst = instance_create_depth(x, centerY + 10, depth - 100, power_1)
 	
 	// change the power direction
 	with(_power1Inst){
