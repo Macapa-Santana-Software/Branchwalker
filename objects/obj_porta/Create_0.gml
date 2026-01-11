@@ -16,3 +16,5 @@ interaction_radius = 30;
 show_prompt = false;
 prompt_text = "Aperte R para abrir a porta";
 
+
+

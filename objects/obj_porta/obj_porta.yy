@@ -11,8 +11,8 @@
   "name":"obj_porta",
   "overriddenProperties":[],
   "parent":{
-    "name":"controller",
-    "path":"folders/Objetos/controller.yy",
+    "name":"portas",
+    "path":"folders/Objetos/portas.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,10 +28,7 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"trancada","filters":[],"listItems":[],"multiselect":false,"name":"trancada","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
-    {"$GMObjectProperty":"v1","%Name":"exige_cartao","filters":[],"listItems":[],"multiselect":false,"name":"exige_cartao","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
