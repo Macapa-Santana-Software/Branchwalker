@@ -12,4 +12,3 @@ image_speed = 0.5; // Velocidade da animação
 
 // Inventário simples
 global.tem_cartao_acesso = false;
-

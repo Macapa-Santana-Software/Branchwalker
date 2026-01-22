@@ -1,13 +1,11 @@
 // =====================================================
-// 1. INPUT
+// 1. INPUT (MODULAR)
 // =====================================================
-var _up    = keyboard_check(ord("W")) || keyboard_check(vk_up);
-var _down  = keyboard_check(ord("S")) || keyboard_check(vk_down);
-var _left  = keyboard_check(ord("A")) || keyboard_check(vk_left);
-var _right = keyboard_check(ord("D")) || keyboard_check(vk_right);
+// Input gerenciado no script "scr_player_input"
+var _input = get_player_input();
 
-x_input = _right - _left;
-y_input = _down - _up;
+x_input = _input.axis_x;
+y_input = _input.axis_y;
 
 
 // =====================================================
@@ -48,9 +46,9 @@ col = instance_place(x + vel_x, y, obj_parede);
 
 // Se não for parede, checa porta
 if (col == noone) {
-    col = instance_place(x + vel_x, y, obj_porta);
+    col = instance_place(x + vel_x, y, obj_porta_nova);
 
-    if (col != noone && col.estado != 0) {
+    if (col != noone && col.image_index != 0) {
         // Porta aberta ou metade → ignora colisão
         col = noone;
     }
@@ -76,9 +74,9 @@ col = instance_place(x, y + vel_y, obj_parede);
 
 // Checa porta
 if (col == noone) {
-    col = instance_place(x, y + vel_y, obj_porta);
+    col = instance_place(x, y + vel_y, obj_porta_nova);
 
-    if (col != noone && col.estado != 0) {
+    if (col != noone && col.image_index != 0) {
         col = noone;
     }
 }
